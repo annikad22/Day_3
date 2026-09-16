@@ -12,7 +12,7 @@ source .venv/bin/activate **
 ##Step 2 - Install Dependencies / Python Libraries
 
 create a requirements.txt file ***
-add, each on a newline, openai + streamlit + python-dotenv + chromadb + pypdf 
+add, each on a newline, openai + streamlit + python-dotenv + chromadb + pypdf tiktoken
 
 ##make sure to freeze open AI
 

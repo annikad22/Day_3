@@ -172,4 +172,18 @@ if st.session_state.bubble1 is False:
         st.write("And bubble2 is False")
     else:
         st.write("Bubble 3 is True")
-        
+
+def ask_ai_yes_no(question):
+    response = client.responses.create(
+        model="gpt-4o",
+        instructions="Answer strictly with a single word: Yes or No. No punctuation, no explanation.",
+        input=question,
+        max_output_tokens=16,
+        temperature=0,
+    )
+    return response.output_text.strip()
+
+user_input = st.text_area(label="question")
+
+answer = ask_ai_yes_no(user_input)
+st.write(answer)
